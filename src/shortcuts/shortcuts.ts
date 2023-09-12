@@ -11,7 +11,7 @@
 
 class Bag {
     constructor(
-        items: string[]
+        public items: string[]
     ) { }
 
     lookInside() {
@@ -21,8 +21,8 @@ class Bag {
 
 class BrandedBag extends Bag {
     constructor(
-        logo: string,
-        brand: string,
+        public logo: string,
+        public brand: string,
         items: string[]
     ) {
         super(items);

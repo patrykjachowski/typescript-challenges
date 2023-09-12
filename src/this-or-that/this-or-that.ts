@@ -11,8 +11,9 @@
 
 const iAmANumber = 800
 const iAmAString = '600'
+type sizeInput = string | number;
 
-function configureScreenSize(width: string, height: string) {
+function configureScreenSize(width: sizeInput, height: sizeInput) {
     return `Setting screen size as ${width}px x ${height}px`;
 }
 

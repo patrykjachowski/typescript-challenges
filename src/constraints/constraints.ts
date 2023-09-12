@@ -21,6 +21,11 @@ interface Video {
     length: number;
 }
 
+interface StockItem {
+    id: number;
+    name: string;
+}
+
 const books: Book[] = [
     { id: 1, name: 'Our Friends from Frolix 8', author: 'Philip K. Dick' },
     { id: 2, name: 'When: The Scientific Secrets of Perfect Timing', author: 'Daniel H. Pink' },
@@ -36,7 +41,7 @@ const videos: Video[] = [
     { id: 5, name: 'Poznaj TypeScript', length: 22 }
 ]
 
-function processItems<T>(items: T[]): T[] {
+function processItems<T extends StockItem>(items: T[]): StockItem[] {
     return items
         .filter(({ id }) => id > 2)
         .map(({ id, name }) => ({ id, name }));
